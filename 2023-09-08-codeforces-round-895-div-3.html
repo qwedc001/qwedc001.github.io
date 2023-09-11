@@ -22,28 +22,35 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lowlight&#39;s ACM Blog">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="A Two VesselsYou have two vessels with water. The first vessel contains $a$ grams of water, and the second vessel contains $b$ grams of water. Both vessels are very large and can hold any amount of wa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Codeforces Round 895(Div.3) 题解记录">
+<meta property="og:url" content="http://example.com/2023-09-08-codeforces-round-895-div-3.html">
 <meta property="og:site_name" content="Lowlight&#39;s ACM Blog">
+<meta property="og:description" content="A Two VesselsYou have two vessels with water. The first vessel contains $a$ grams of water, and the second vessel contains $b$ grams of water. Both vessels are very large and can hold any amount of wa">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://espresso.codeforces.com/b5c043dc906fc8419a9336f15dbb9f7f1f1b611f.png">
+<meta property="article:published_time" content="2023-09-08T15:02:26.000Z">
+<meta property="article:modified_time" content="2023-09-11T13:05:51.503Z">
 <meta property="article:author" content="Eric Lowlight Guo 国展源">
+<meta property="article:tag" content="Codeforces">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://espresso.codeforces.com/b5c043dc906fc8419a9336f15dbb9f7f1f1b611f.png">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2023-09-08-codeforces-round-895-div-3.html">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Lowlight's ACM Blog</title>
+  <title>Codeforces Round 895(Div.3) 题解记录 | Lowlight's ACM Blog</title>
   
 
 
@@ -186,9 +193,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -204,10 +212,9 @@
       <meta itemprop="name" content="Lowlight's ACM Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023-09-08-codeforces-round-895-div-3.html" class="post-title-link" itemprop="url">Codeforces Round 895(Div.3) 题解记录</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Codeforces Round 895(Div.3) 题解记录
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -226,7 +233,14 @@
                 <time title="修改时间：2023-09-11 21:05:51" itemprop="dateModified" datetime="2023-09-11T21:05:51+08:00">2023-09-11</time>
               </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -251,7 +265,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="A-Two-Vessels"><a href="#A-Two-Vessels" class="headerlink" title="A Two Vessels"></a>A Two Vessels</h1><p>You have two vessels with water. The first vessel contains $a$ grams of water, and the second vessel contains $b$ grams of water. Both vessels are very large and can hold any amount of water.<br>You also have an empty cup that can hold up to $c$ grams of water.<br>In one move, you can scoop up to $c$ grams of water from any vessel and pour it into the other vessel. Note that the mass of water poured in one move does not have to be an integer.<br>What is the minimum number of moves required to make the masses of water in the vessels equal? Note that you cannot perform any actions other than the described moves.</p>
+        <h1 id="A-Two-Vessels"><a href="#A-Two-Vessels" class="headerlink" title="A Two Vessels"></a>A Two Vessels</h1><p>You have two vessels with water. The first vessel contains $a$ grams of water, and the second vessel contains $b$ grams of water. Both vessels are very large and can hold any amount of water.<br>You also have an empty cup that can hold up to $c$ grams of water.<br>In one move, you can scoop up to $c$ grams of water from any vessel and pour it into the other vessel. Note that the mass of water poured in one move does not have to be an integer.<br>What is the minimum number of moves required to make the masses of water in the vessels equal? Note that you cannot perform any actions other than the described moves.</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>数学题，但是要注意数据类型均为小数</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 两个水管</span></span><br><span class="line">    <span class="comment">//第一个有a克水</span></span><br><span class="line">    <span class="comment">//第二个有b克水</span></span><br><span class="line">    <span class="comment">//你有一个可以放c克水的杯子</span></span><br><span class="line">    <span class="comment">//你每次可以从一个管子里拿出最多c克的水（不一定是整数）放进另一个管子</span></span><br><span class="line">    <span class="type">int</span> a,b,c;</span><br><span class="line">    cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">    cout&lt;&lt;<span class="built_in">ceil</span>(((<span class="built_in">abs</span>(a-b)/<span class="number">2.0</span>)/(c*<span class="number">1.0</span>)))&lt;&lt;endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    cin&gt;&gt;t;</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">solve</span>();</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -260,111 +274,33 @@
 <p><img src="https://espresso.codeforces.com/b5c043dc906fc8419a9336f15dbb9f7f1f1b611f.png">A schematic representation of a possible corridor and your path to room $k$ and back.<br>Determine the maximum value of $k$ that allows you to travel from room $1$ to room $k$ and then return to room $1$ safely.<br>For instance, if n&#x3D;1 and $d_1&#x3D;2,s_1&#x3D;2$, you can proceed to room $k&#x3D;2$ and return safely (the trap will activate at the moment $1+s_1&#x3D;1+2&#x3D;3$, it can’t prevent you to return back). But if you attempt to reach room $k&#x3D;3$, the trap will activate at the moment $1+s_1&#x3D;1+2&#x3D;3$ preventing your return (you would attempt to enter room 2 on your way back at second 3, but the activated trap would block you). Any larger value for k is also not feasible. Thus, the answer is $k&#x3D;2$.</p>
 <h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><p>见注释，懒了（</p>
 <h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Trap</span>&#123;</span><br><span class="line">    <span class="type">int</span> activateSeconds;</span><br><span class="line">    <span class="type">int</span> roomNum;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">cmp</span><span class="params">(Trap a,Trap b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.roomNum&lt;b.roomNum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//模拟各个房间的状态</span></span><br><span class="line">    <span class="comment">//数据集很小，直接暴力</span></span><br><span class="line">    <span class="comment">//告诉你有n个陷阱，要求你求出最大可能到达的k房间并回来不会触发陷阱的k</span></span><br><span class="line">    <span class="comment">//你每次只能往右前进一格</span></span><br><span class="line">    <span class="type">int</span> trapsNum;</span><br><span class="line">    <span class="type">int</span> timestamp=<span class="number">0</span>;</span><br><span class="line">    <span class="type">int</span> flag=<span class="number">0</span>;</span><br><span class="line">    cin&gt;&gt;trapsNum;</span><br><span class="line">    <span class="type">int</span> k=<span class="number">0</span>;</span><br><span class="line">    <span class="function">vector&lt;Trap&gt; <span class="title">traps</span><span class="params">(trapsNum)</span></span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;trapsNum;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;traps[i].roomNum&gt;&gt;traps[i].activateSeconds;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">sort</span>(traps.<span class="built_in">begin</span>(),traps.<span class="built_in">end</span>(),cmp);</span><br><span class="line">    <span class="comment">//你到a房间的用时为a</span></span><br><span class="line">    <span class="comment">//你从k房间回到a房间的时间是k+k-a=2k-a</span></span><br><span class="line">    <span class="comment">//炸弹激活的时间是a+activateSeconds</span></span><br><span class="line">    <span class="comment">//如果炸弹激活时间比回到t房间时间早，则这个k无效，取k--</span></span><br><span class="line">    <span class="keyword">for</span>(;;k++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(Trap &amp;t:traps)&#123;</span><br><span class="line">            <span class="keyword">if</span>(t.roomNum+t.activateSeconds&lt;=<span class="number">2</span>*k-t.roomNum)</span><br><span class="line">            &#123;</span><br><span class="line">                flag=<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(flag==<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    cout&lt;&lt;k<span class="number">-1</span>&lt;&lt;endl;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> t;</span><br><span class="line">    cin&gt;&gt;t;</span><br><span class="line">    <span class="keyword">while</span>(t--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">solve</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;```</span><br><span class="line"># C 游游开车出游</span><br><span class="line">游游准备开车出游，她的车非常特殊，油越多则最高速度越快，即最高速度和油量是成正比的。另外，行驶过程中油是不会消耗的。</span><br><span class="line">已知游游的车初始的最高速度为$v_0$，当游游花费了$t$时间加油时，车的最高速度会变成$v_0+t∗x$。</span><br><span class="line">游游开车的总里程为$y$，假设游游始终以最高速度行驶（即忽略加速时间），游游想知道，自己最少花费多少时间可以完成出游？</span><br><span class="line">## 思路</span><br><span class="line">纯数学题？纯数学题？纯数学题？</span><br><span class="line">对公式进行求导，然后得到导数的极值点，再代回原式</span><br><span class="line">梦回高中</span><br><span class="line">## 代码</span><br><span class="line">```cpp</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">double</span> v0,x,y;</span><br><span class="line">    cin &gt;&gt; v0 &gt;&gt; x &gt;&gt; y;</span><br><span class="line">    <span class="keyword">if</span>(v0 &gt; <span class="built_in">sqrt</span>(x*y)) <span class="built_in">printf</span>(<span class="string">&quot;%.12llf&quot;</span>,y/v0);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;%.12llf&quot;</span>,<span class="number">2</span>*<span class="built_in">sqrt</span>(y/x) - v0/x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">solve</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/Codeforces/" rel="tag"># Codeforces</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2023-09-03-nowcoder_round10.html">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Eric Lowlight Guo 国展源">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lowlight's ACM Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2023-09-03-nowcoder_round10.html" class="post-title-link" itemprop="url">牛客周赛 Round 10 题解记录</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2023-09-03 22:26:48" itemprop="dateCreated datePublished" datetime="2023-09-03T22:26:48+08:00">2023-09-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-09-08 23:04:55" itemprop="dateModified" datetime="2023-09-08T23:04:55+08:00">2023-09-08</time>
-              </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>2.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>4 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="A-游游的最长稳定数组"><a href="#A-游游的最长稳定数组" class="headerlink" title="A 游游的最长稳定数组"></a>A 游游的最长稳定数组</h1><p>游游定义一个数组为“稳定的”，当且仅当数组相邻的两个元素之差的绝对值不超过1。例如$[2,3,2,2,1]$是稳定的，而$[1,3,2]$则不是稳定的。<br>游游拿到了一个数组，她想求出该数组的最长的“稳定的”连续子数组的长度，你能帮帮她吗？</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>模拟题，遍历数组内容，记录两两之间的绝对值存入新数组，在新数组里寻找最长子数组</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">10</span>;</span><br><span class="line"><span class="type">int</span> n,a[N];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) cin &gt;&gt; a[i];</span><br><span class="line">    <span class="type">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> length = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> j = i + <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">abs</span>(a[j] - a[j - <span class="number">1</span>]) &lt;= <span class="number">1</span>) length++;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                i = j - <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        res = <span class="built_in">max</span>(length,res);</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; res &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">solve</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="B-游游的字符重排"><a href="#B-游游的字符重排" class="headerlink" title="B 游游的字符重排"></a>B 游游的字符重排</h1><p>游游定义一个字符串是“好串”，当且仅当该字符串相邻的字符不相等。例如”arcaea”是好串，而”food”不是好串。<br>游游拿到了一个字符串，她可以将该字符串的各个字符顺序随意打乱。她想知道一共可以生产多少种不同的好串？</p>
-<h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><p>全排列，直接将字符串视为一串ASCII的数字数组然后求这个数组的全排列就行。因为数据范围足够小（字符数小于等于10），所以可以直接暴力枚举</p>
-<h3 id="补充：next-permutation"><a href="#补充：next-permutation" class="headerlink" title="补充：next_permutation"></a>补充：next_permutation</h3><p>和prev_permutation相对，作为获取全排列时可以使用的非常方便俩函数<br>next_permutation在使用的时候会自动获取传入的“上一个序列”，所以如果想要获取全排列，next_permutation要和sort连用，并且sort的规则为升序排序<br>基本用法：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> n=<span class="number">5</span>;</span><br><span class="line"><span class="type">int</span> a[n];</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">    cin&gt;&gt;a[i];</span><br><span class="line"><span class="keyword">do</span>&#123;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">        cout&lt;&lt;a[i]&lt;&lt;<span class="string">&#x27; &#x27;</span>;<span class="comment">//打印全排列</span></span><br><span class="line">    cout&lt;&lt;endl;</span><br><span class="line">&#125;<span class="keyword">while</span>(<span class="built_in">next_permutation</span>(a,a+n,cmp));</span><br></pre></td></tr></table></figure>
-<p>同样的，struct和vector也可以使用这个函数，但是比较函数要自定义，并且在全排列之前也要升序</p>
-<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">20</span>;</span><br><span class="line"><span class="type">int</span> a[N];</span><br><span class="line">string s;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; s;</span><br><span class="line">    <span class="type">int</span> n = s.<span class="built_in">size</span>();</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; s.<span class="built_in">size</span>(); i++) a[i] = s[i] - <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line">    <span class="built_in">sort</span>(a,a + n);</span><br><span class="line">    <span class="type">int</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">do</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">bool</span> flag = <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(a[i] == a[i - <span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                flag = <span class="literal">false</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(flag) result++;</span><br><span class="line">    &#125;<span class="keyword">while</span>(<span class="built_in">next_permutation</span>(a,a + n));</span><br><span class="line">    cout &lt;&lt; result &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">solve</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h1 id="C-游游开车出游"><a href="#C-游游开车出游" class="headerlink" title="C 游游开车出游"></a>C 游游开车出游</h1><p>游游准备开车出游，她的车非常特殊，油越多则最高速度越快，即最高速度和油量是成正比的。另外，行驶过程中油是不会消耗的。<br>已知游游的车初始的最高速度为$v_0$，当游游花费了$t$时间加油时，车的最高速度会变成$v_0+t∗x$。<br>游游开车的总里程为$y$，假设游游始终以最高速度行驶（即忽略加速时间），游游想知道，自己最少花费多少时间可以完成出游？</p>
-<h2 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h2><p>纯数学题？纯数学题？纯数学题？<br>对公式进行求导，然后得到导数的极值点，再代回原式<br>梦回高中</p>
-<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">long</span> <span class="type">double</span> v0,x,y;</span><br><span class="line">    cin &gt;&gt; v0 &gt;&gt; x &gt;&gt; y;</span><br><span class="line">    <span class="keyword">if</span>(v0 &gt; <span class="built_in">sqrt</span>(x*y)) <span class="built_in">printf</span>(<span class="string">&quot;%.12llf&quot;</span>,y/v0);</span><br><span class="line">    <span class="keyword">else</span> <span class="built_in">printf</span>(<span class="string">&quot;%.12llf&quot;</span>,<span class="number">2</span>*<span class="built_in">sqrt</span>(y/x) - v0/x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">solve</span>();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2023-09-03-nowcoder_round10.html" rel="prev" title="牛客周赛 Round 10 题解记录">
+      <i class="fa fa-chevron-left"></i> 牛客周赛 Round 10 题解记录
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -417,6 +353,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-Two-Vessels"><span class="nav-number">1.</span> <span class="nav-text">A Two Vessels</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B-%E6%B8%B8%E6%B8%B8%E7%9A%84%E5%AD%97%E7%AC%A6%E9%87%8D%E6%8E%92"><span class="nav-number">2.</span> <span class="nav-text">B 游游的字符重排</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-1"><span class="nav-number">2.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-number">2.2.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
