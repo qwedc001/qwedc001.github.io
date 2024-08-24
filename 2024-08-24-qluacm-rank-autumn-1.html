@@ -22,28 +22,35 @@
     var CONFIG = {"hostname":"qwedc001.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="醉心代码无法自拔">
-<meta property="og:url" content="http://qwedc001.github.io/index.html">
+  <meta name="description" content="点我补题 A.01思路如果 $0$ 或者 $1$ 有一个是偶数个，则一定可以通过操作将它们全部反转成另一个数字。所以只需要判断两个数字是否都是奇数个即可。 代码123456void solve()&amp;#123;    string str;    cin &gt;&gt; str;    cout &lt;&lt; (count(all(str), &amp;#x27;0&amp;#x27;) &amp; 1 &amp;a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="齐鲁工业大学ACM队内排位赛 2024秋季第一场 部分题解">
+<meta property="og:url" content="http://qwedc001.github.io/2024-08-24-qluacm-rank-autumn-1.html">
 <meta property="og:site_name" content="醉心代码无法自拔">
+<meta property="og:description" content="点我补题 A.01思路如果 $0$ 或者 $1$ 有一个是偶数个，则一定可以通过操作将它们全部反转成另一个数字。所以只需要判断两个数字是否都是奇数个即可。 代码123456void solve()&amp;#123;    string str;    cin &gt;&gt; str;    cout &lt;&lt; (count(all(str), &amp;#x27;0&amp;#x27;) &amp; 1 &amp;a">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-24T15:59:30.000Z">
+<meta property="article:modified_time" content="2024-08-24T16:25:38.064Z">
 <meta property="article:author" content="Zhanyuan Guo">
+<meta property="article:tag" content="题解">
+<meta property="article:tag" content="ACM">
+<meta property="article:tag" content="算法竞赛">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://qwedc001.github.io/">
+<link rel="canonical" href="http://qwedc001.github.io/2024-08-24-qluacm-rank-autumn-1.html">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>醉心代码无法自拔</title>
+  <title>齐鲁工业大学ACM队内排位赛 2024秋季第一场 部分题解 | 醉心代码无法自拔</title>
   
 
 
@@ -186,9 +193,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -204,10 +212,9 @@
       <meta itemprop="name" content="醉心代码无法自拔">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024-08-24-qluacm-rank-autumn-1.html" class="post-title-link" itemprop="url">齐鲁工业大学ACM队内排位赛 2024秋季第一场 部分题解</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          齐鲁工业大学ACM队内排位赛 2024秋季第一场 部分题解
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -226,7 +233,14 @@
                 <time title="修改时间：2024-08-25 00:25:38" itemprop="dateModified" datetime="2024-08-25T00:25:38+08:00">2024-08-25</time>
               </span>
 
-          <br>
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -251,7 +265,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><a target="_blank" rel="noopener" href="https://icpc.qlu.edu.cn/training/664b4d4450be682a1fe01296">点我补题</a></p>
+        <p><a target="_blank" rel="noopener" href="https://icpc.qlu.edu.cn/training/664b4d4450be682a1fe01296">点我补题</a></p>
 <h1 id="A-01"><a href="#A-01" class="headerlink" title="A.01"></a>A.01</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>如果 $0$ 或者 $1$ 有一个是偶数个，则一定可以通过操作将它们全部反转成另一个数字。所以只需要判断两个数字是否都是奇数个即可。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    string str;</span><br><span class="line">    cin &gt;&gt; str;</span><br><span class="line">    cout &lt;&lt; (<span class="built_in">count</span>(<span class="built_in">all</span>(str), <span class="string">&#x27;0&#x27;</span>) &amp; <span class="number">1</span> &amp;&amp; <span class="built_in">count</span>(<span class="built_in">all</span>(str), <span class="string">&#x27;1&#x27;</span>) &amp; <span class="number">1</span> ? <span class="string">&quot;NO&quot;</span> : <span class="string">&quot;YES&quot;</span>) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -274,143 +288,35 @@
 <hr>
 <p><strong>待补：C，F，I</strong></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/%E9%A2%98%E8%A7%A3/" rel="tag"># 题解</a>
+              <a href="/tags/ACM/" rel="tag"># ACM</a>
+              <a href="/tags/%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B/" rel="tag"># 算法竞赛</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://qwedc001.github.io/2024-08-24-atcoder-abc-368.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="Zhanyuan Guo">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="醉心代码无法自拔">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024-08-24-atcoder-abc-368.html" class="post-title-link" itemprop="url">Atcoder Beginner Contest 368 题解</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2024-08-24 23:04:00 / 修改时间：23:52:13" itemprop="dateCreated datePublished" datetime="2024-08-24T23:04:00+08:00">2024-08-24</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Atcoder%E9%A2%98%E8%A7%A3/" itemprop="url" rel="index"><span itemprop="name">Atcoder题解</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>3.9k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>7 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="A-Cut"><a href="#A-Cut" class="headerlink" title="A.Cut"></a>A.Cut</h1><h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>输入一个数组 $ a[1],a[2],…,a[n] $ 和一个数字 $k $ ，输出 $a[k],a[k+1],…,a[n],a[1],a[2],…a[k-1]$。</p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
-<li>直接 for 循环输出即可</li>
-<li>使用 STL  <code>deque</code> （？）</li>
-</ol>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> <span class="comment">// deque</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n, k, tmp;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    deque&lt;<span class="type">int</span>&gt; deq;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin &gt;&gt; tmp;</span><br><span class="line">        deq.<span class="built_in">push_back</span>(tmp);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (k--)</span><br><span class="line">    &#123;</span><br><span class="line">        deq.<span class="built_in">push_front</span>(deq.<span class="built_in">back</span>());</span><br><span class="line">        deq.<span class="built_in">pop_back</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (!deq.<span class="built_in">empty</span>())</span><br><span class="line">        cout &lt;&lt; deq.<span class="built_in">front</span>() &lt;&lt; <span class="string">&quot; &quot;</span>, deq.<span class="built_in">pop_front</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> <span class="comment">// for</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n, k;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">    <span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">        cin &gt;&gt; a[i];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = n - k; i &lt; n; i++)</span><br><span class="line">        cout &lt;&lt; a[i] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n - k; i++)</span><br><span class="line">        cout &lt;&lt; a[i] &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="B-Decrease-2-max-elements"><a href="#B-Decrease-2-max-elements" class="headerlink" title="B.Decrease 2 max elements"></a>B.Decrease 2 max elements</h1><h2 id="题目大意-1"><a href="#题目大意-1" class="headerlink" title="题目大意"></a>题目大意</h2><p>输入一个数组 $ a[1],a[2],…,a[n] $，重复将数组降序排序，将前两个数字分别 -1，求几次后让整个数组最多只有一个正数</p>
-<h2 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h2><h3 id="针对此题"><a href="#针对此题" class="headerlink" title="针对此题"></a>针对此题</h3><p>范围非常小，直接暴力就行。</p>
-<h3 id="范围变大时候的更快解法"><a href="#范围变大时候的更快解法" class="headerlink" title="范围变大时候的更快解法"></a>范围变大时候的更快解法</h3><p>首先，每次操作 $\displaystyle\sum _ {i&#x3D;1} ^ NA _ i$ 都会减少 $2$ ，因此答案小于或等于 $\displaystyle\Biggl\lfloor\dfrac12\sum _ {i&#x3D;1} ^ NA _ i\Biggr\rfloor$ 。</p>
-<p>接下来，由于每次操作中 $\displaystyle\max _ {1\leq i\leq N}A _ i$ 最多减少 $1$ ，因此 $\displaystyle\sum _ {i&#x3D;1} ^ NA _ i-\max _ {1\leq i\leq N}A _ i$ 在 $1$ 操作中减少 $1$ 或 $2$ ，结果小于或等于 $\displaystyle\sum _ {i&#x3D;1} ^ NA _ i-\max _ {1\leq i\leq N}A _ i$ 。</p>
-<p>所以答案为$\displaystyle\min\Biggl\lbrace\Biggl\lfloor\dfrac12\sum _ {i&#x3D;1} ^ NA _ i\Biggr\rfloor,\sum _ {i&#x3D;1} ^ NA _ i-\max _ {1\leq i\leq N}A _ i\Biggr\rbrace$。</p>
-<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> <span class="comment">// brute</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">vec</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		cin &gt;&gt; vec[i];</span><br><span class="line">	<span class="type">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">sort</span>(<span class="built_in">all</span>(vec), greater&lt;&gt;());</span><br><span class="line">	<span class="keyword">do</span></span><br><span class="line">	&#123;</span><br><span class="line">		vec[<span class="number">0</span>]--, vec[<span class="number">1</span>]--, cnt++;</span><br><span class="line">		<span class="built_in">sort</span>(<span class="built_in">all</span>(vec), greater&lt;&gt;());</span><br><span class="line">	&#125; <span class="keyword">while</span> (vec[<span class="number">0</span>] &gt; <span class="number">0</span> &amp;&amp; vec[<span class="number">1</span>] &gt; <span class="number">0</span>);</span><br><span class="line">	cout &lt;&lt; cnt &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span> <span class="comment">// math</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="type">int</span> sum = <span class="number">0</span>, mx = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (n--)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> a;</span><br><span class="line">		cin &gt;&gt; a;</span><br><span class="line">		sum += a;</span><br><span class="line">		mx = <span class="built_in">max</span>(a, mx);</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; <span class="built_in">min</span>(sum / <span class="number">2</span>, sum - mx) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="C-Triple-Attack"><a href="#C-Triple-Attack" class="headerlink" title="C.Triple Attack"></a>C.Triple Attack</h1><h2 id="题目大意-2"><a href="#题目大意-2" class="headerlink" title="题目大意"></a>题目大意</h2><p>输入一个数组 $ a[1],a[2],…,a[n] $，每次对数组第一个数重复以下操作，当第一个数降到0及以下的时候将其移出数组：</p>
-<ol>
-<li>将数字减少1</li>
-<li>将数字减少1</li>
-<li>将数字减少3</li>
-</ol>
-<p>问几次操作后能置空整个数组。</p>
-<h2 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h2><p>本题有坑。移出一个数字以后其操作次数是保留的，如果在移出头部数字的时候已经进行了前两步操作，那么可以直接对下一个数进行第三步操作。（吃了两发）</p>
-<p>当第一个敌人的生命值达到 $5$ 或更高时，接下来的 $3$ 操作可以使第一个敌人的生命值减少 $5$ ，无论 $T$ 的当前值是多少。如果第一个敌人的生命值是 $H$ ，这组三个动作将重复 $\lfloor\frac{H}{5}\rfloor$ 组。通过一次性处理这部分并模拟即可。</p>
-<h2 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> i64 = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	i64 cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> a;</span><br><span class="line">		cin &gt;&gt; a;</span><br><span class="line">		cnt += a / <span class="number">5</span> * <span class="number">3</span>;</span><br><span class="line">		a %= <span class="number">5</span>;</span><br><span class="line">		<span class="keyword">while</span> (a &gt; <span class="number">0</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			cnt++;</span><br><span class="line">			<span class="keyword">if</span> (cnt % <span class="number">3</span> == <span class="number">0</span>)</span><br><span class="line">				a -= <span class="number">3</span>;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				a--;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; cnt &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
 
 
-<h1 id="D-Minimum-Steiner-Tree"><a href="#D-Minimum-Steiner-Tree" class="headerlink" title="D.Minimum Steiner Tree"></a>D.Minimum Steiner Tree</h1><h2 id="题目大意-3"><a href="#题目大意-3" class="headerlink" title="题目大意"></a>题目大意</h2><p>给一颗 $n$ 个节点， $n-1$ 条边的树，给出 $k$ 个节点，找到连接这 $k$ 个节点的最小联通块的大小。</p>
-<h2 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h2><p>带路径染色的DFS。用 <code>vector &lt;bool&gt;</code> 存一下被染色的路径点和需要找到的 $k$ 个节点即可。</p>
-<h2 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> MAXN = <span class="number">2e5</span> + <span class="number">10</span>;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; edges[MAXN];</span><br><span class="line"><span class="function">vector&lt;<span class="type">bool</span>&gt; <span class="title">vec</span><span class="params">(MAXN)</span></span>;</span><br><span class="line"><span class="type">int</span> n, k;</span><br><span class="line"><span class="function">vector&lt;<span class="type">bool</span>&gt; <span class="title">vis</span><span class="params">(MAXN)</span></span>;</span><br><span class="line"><span class="type">int</span> ans = INT_MAX;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> start)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	vis[start] = <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> edge : edges[start])</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (!vis[edge] &amp;&amp; <span class="built_in">dfs</span>(edge))</span><br><span class="line">			vec[start] = <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	vis[start] = <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">if</span> (vec[start])</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n - <span class="number">1</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> u, v;</span><br><span class="line">		cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line">		edges[u].<span class="built_in">push_back</span>(v);</span><br><span class="line">		edges[v].<span class="built_in">push_back</span>(u);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> start = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; k; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> tmp;</span><br><span class="line">		cin &gt;&gt; tmp;</span><br><span class="line">		<span class="keyword">if</span> (i == <span class="number">0</span>)</span><br><span class="line">			start = tmp;</span><br><span class="line">		vec[tmp] = <span class="literal">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">dfs</span>(start);</span><br><span class="line">	cout &lt;&lt; <span class="built_in">count</span>(<span class="built_in">all</span>(vec), <span class="literal">true</span>) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><strong>以下为补题部分</strong></p>
-<h1 id="F-Dividing-Game"><a href="#F-Dividing-Game" class="headerlink" title="F.Dividing Game"></a>F.Dividing Game</h1><h2 id="题目大意-4"><a href="#题目大意-4" class="headerlink" title="题目大意"></a>题目大意</h2><p>输入一个数组 $ a[1],a[2],…,a[n] $，<code>Anna</code> 和 <code>Bruno</code> 轮流选取其中的数字 $a[i]$ ，并且将 $a[i]$ 替换为其任意一个非自己的因数。不能进行此操作的玩家输掉比赛。问谁会赢。</p>
-<h2 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h2><p>Nim 游戏中的 SG 函数。<a target="_blank" rel="noopener" href="https://oi.wiki/math/game-theory/impartial-game/#%E6%9C%89%E5%90%91%E5%9B%BE%E6%B8%B8%E6%88%8F%E4%B8%8E-sg-%E5%87%BD%E6%95%B0">参考资料（OI WIKI）</a>，<a target="_blank" rel="noopener" href="https://www.luogu.com.cn/article/shyocttb">参考资料2（洛谷博客，SG函数精讲）</a>。</p>
-<h2 id="代码-4"><a href="#代码-4" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="type">int</span> m = INT_MIN;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		cin &gt;&gt; a[i], m = <span class="built_in">max</span>(m, a[i]);</span><br><span class="line">	vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">d</span>(m + <span class="number">1</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">2</span> * i; j &lt;= m; j += i)</span><br><span class="line">			d[j].<span class="built_in">push_back</span>(i); <span class="comment">// 因数</span></span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">sg</span><span class="params">(m + <span class="number">1</span>)</span></span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> x = <span class="number">1</span>; x &lt;= m; x++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> k = d[x].<span class="built_in">size</span>();</span><br><span class="line">		<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">cnt</span><span class="params">(k + <span class="number">1</span>)</span></span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">auto</span> y : d[x])</span><br><span class="line">			<span class="keyword">if</span> (sg[y] &lt;= k)</span><br><span class="line">				cnt[sg[y]]++;</span><br><span class="line">		<span class="keyword">while</span> (cnt[sg[x]] &gt; <span class="number">0</span>)</span><br><span class="line">			sg[x]++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">		ans ^= sg[a[i]];</span><br><span class="line">	cout &lt;&lt; (ans &gt; <span class="number">0</span> ? <span class="string">&quot;Anna&quot;</span> : <span class="string">&quot;Bruno&quot;</span>) &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>TODO：G，F</strong></p>
-
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2024-08-24-atcoder-abc-368.html" rel="prev" title="Atcoder Beginner Contest 368 题解">
+      <i class="fa fa-chevron-left"></i> Atcoder Beginner Contest 368 题解
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -463,6 +369,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#A-01"><span class="nav-number">1.</span> <span class="nav-text">A.01</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">1.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#B-%E8%82%A5%E8%83%96%E5%9F%BA%E5%9B%A0"><span class="nav-number">2.</span> <span class="nav-text">B.肥胖基因</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-1"><span class="nav-number">2.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-1"><span class="nav-number">2.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#D-%E6%98%A5%E6%B8%B8"><span class="nav-number">3.</span> <span class="nav-text">D.春游</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-2"><span class="nav-number">3.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-2"><span class="nav-number">3.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#G-%E6%89%BE7"><span class="nav-number">4.</span> <span class="nav-text">G.找7</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-3"><span class="nav-number">4.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-3"><span class="nav-number">4.2.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#H-%E8%B7%AF%E5%BE%84"><span class="nav-number">5.</span> <span class="nav-text">H.路径</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF-4"><span class="nav-number">5.1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81-4"><span class="nav-number">5.2.</span> <span class="nav-text">代码</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
