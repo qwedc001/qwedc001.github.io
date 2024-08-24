@@ -3,7 +3,8 @@
   <entry>
     <title>Atcoder Beginner Contest 368 题解</title>
     <url>/2024-08-24-atcoder-abc-368.html</url>
-    <content><![CDATA[<h1 id="A-Cut"><a href="#A-Cut" class="headerlink" title="A.Cut"></a>A.Cut</h1><h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>输入一个数组 $ a[1],a[2],…,a[n] $ 和一个数字 $k $ ，输出 $a[k],a[k+1],…,a[n],a[1],a[2],…a[k-1]$。</p>
+    <content><![CDATA[<p>竞赛结果：Contestant,3378th,Solved ABCD,+5</p>
+<h1 id="A-Cut"><a href="#A-Cut" class="headerlink" title="A.Cut"></a>A.Cut</h1><h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>输入一个数组 $ a[1],a[2],…,a[n] $ 和一个数字 $k $ ，输出 $a[k],a[k+1],…,a[n],a[1],a[2],…a[k-1]$。</p>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ol>
 <li>直接 for 循环输出即可</li>
 <li>使用 STL  <code>deque</code> （？）</li>
