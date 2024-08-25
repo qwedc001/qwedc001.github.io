@@ -30,7 +30,7 @@
 <meta property="og:description" content="竞赛结果：Contestant,3378th,Solved ABCD,+5 A.Cut题目大意输入一个数组 $ a[1],a[2],…,a[n] $ 和一个数字 $k $ ，输出 $a[k],a[k+1],…,a[n],a[1],a[2],…a[k-1]$。 思路 直接 for 循环输出即可 使用 STL  deque （？）  代码123456789101112131415161718void">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-24T15:04:00.000Z">
-<meta property="article:modified_time" content="2024-08-25T03:43:46.654Z">
+<meta property="article:modified_time" content="2024-08-25T03:46:21.427Z">
 <meta property="article:author" content="Zhanyuan Guo">
 <meta property="article:tag" content="题解">
 <meta property="article:tag" content="ACM">
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-08-25 11:43:46" itemprop="dateModified" datetime="2024-08-25T11:43:46+08:00">2024-08-25</time>
+                <time title="修改时间：2024-08-25 11:46:21" itemprop="dateModified" datetime="2024-08-25T11:46:21+08:00">2024-08-25</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -328,7 +328,7 @@
 <h1 id="E-Train-Delay"><a href="#E-Train-Delay" class="headerlink" title="E.Train Delay"></a>E.Train Delay</h1><h2 id="题目大意-6"><a href="#题目大意-6" class="headerlink" title="题目大意"></a>题目大意</h2><p>$n$ 个城市，$m$ 条火车，第 $i$ 条 从 $a[i]$ 城市在 $s[i]$ 时刻出发，到达 $b[i]$ 城市的时刻为 $t[i]$。</p>
 <p>现在第一条线路的火车晚点了 $x[1]$ 分钟，为了让任意一组本来可以换乘的火车仍能换乘，需要对其他的所有火车进行晚点（也可以不晚点）。<br>找出从第 $2$ 辆到第 $m$ 辆火车，每辆火车最少需要晚点多长时间。</p>
 <h2 id="思路-6"><a href="#思路-6" class="headerlink" title="思路"></a>思路</h2><p><code>I don&#39;t know how to write dp I am dp 低手</code>。</p>
-<p>以下代码是 <code>jiangly </code>的。大概思路还要梳理一下。可以参考一下Atcoder Editorial的思路。</p>
+<p>以下代码是 <code>jiangly</code> 的。大概思路还要梳理一下。可以参考一下Atcoder Editorial的思路。</p>
 <h2 id="代码-6"><a href="#代码-6" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> N, M, X0;</span><br><span class="line">	cin &gt;&gt; N &gt;&gt; M &gt;&gt; X0;</span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">A</span><span class="params">(M)</span>, <span class="title">B</span><span class="params">(M)</span>, <span class="title">S</span><span class="params">(M)</span>, <span class="title">T</span><span class="params">(M)</span></span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; M; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; A[i] &gt;&gt; B[i] &gt;&gt; S[i] &gt;&gt; T[i];</span><br><span class="line">		A[i]--, B[i]--;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	vector&lt;array&lt;<span class="type">int</span>, 3&gt;&gt; <span class="built_in">e</span>(<span class="number">2</span> * M);</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; M; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		e[<span class="number">2</span> * i] = &#123;S[i], <span class="number">1</span>, i&#125;;</span><br><span class="line">		e[<span class="number">2</span> * i + <span class="number">1</span>] = &#123;T[i], <span class="number">0</span>, i&#125;;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">sort</span>(e.<span class="built_in">begin</span>(), e.<span class="built_in">end</span>());</span><br><span class="line"></span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">X</span><span class="params">(M)</span></span>;</span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">tm</span><span class="params">(N)</span></span>;</span><br><span class="line">	X[<span class="number">0</span>] = X0;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> [t, o, i] : e)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (o == <span class="number">1</span>)</span><br><span class="line">			X[i] = <span class="built_in">max</span>(X[i], tm[A[i]] - S[i]);</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">			tm[B[i]] = <span class="built_in">max</span>(tm[B[i]], T[i] + X[i]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt; M; i++)</span><br><span class="line">		cout &lt;&lt; X[i] &lt;&lt; <span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     </div>
@@ -428,18 +428,18 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">4</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -483,12 +483,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">10k</span>
+    <span title="站点总字数">15k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">18 分钟</span>
+    <span title="站点阅读时长">27 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
