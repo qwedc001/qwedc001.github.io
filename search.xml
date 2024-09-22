@@ -394,4 +394,27 @@
         <tag>模板</tag>
       </tags>
   </entry>
+  <entry>
+    <title>[Trick] 随机化的 Xor Hashing</title>
+    <url>/2024-09-22-trick-random-xor-hashing.html</url>
+    <content><![CDATA[<p>参考文献： <a href="https://oi.wiki/misc/rand-technique/#%E9%9A%8F%E6%9C%BA%E5%8C%96%E7%94%A8%E4%BA%8E%E5%93%88%E5%B8%8C">OI-Wiki - 随机化技巧</a></p>
+<h1 id="基础思想"><a href="#基础思想" class="headerlink" title="基础思想"></a>基础思想</h1><p>异或的性质：相同数字异或为0。</p>
+<p>引入随机数的目的是做哈希运算的时候减小哈希碰撞，在使用mt19937_64的前提下，随机数强度足以避免哈希碰撞。并且，异或的上述性质可以保证当两侧的哈希相同的时候，运算结果恒定为0。</p>
+<h1 id="以CF2014H为例"><a href="#以CF2014H为例" class="headerlink" title="以CF2014H为例"></a>以CF2014H为例</h1><h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>经过读题可以发现，警长作为后手压根没有必胜策略，只要罗宾每次打最大的气球，最后的得分一定会大于等于警长的得分。</p>
+<p>那么考虑平局的情况，不难发现警长只有和罗宾先后手打同一得分的气球才能打成平手，也就是对于每种在区间 $[l,r]$ 的得分为 $x$ 的气球，必须存在偶数个。</p>
+<p>这个问题乍一看很简单，异或前缀和以后求 $[l,r]$ 区间异或是否为 $0$ 就行了，但是实际操作的时候，不难发现由于给出数字比较小，很容易出现碰撞产生错误结果的情况，于是需要对每一个数字进行随机化映射。例如随机化数组为 $ [1930204585,12390125,485989234,1239049102349012]$，则源输入数据的 $[0,1,2,3]$ 分别对应了随机数组中的三个数，他们的 $xor$ 结果就不会为 $0$ 了。</p>
+<p><img src="/image/trick-random-xor-hashing/1727013083262.png" alt="1727013083262"></p>
+<p>这就是随机化哈希的思想。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">using</span> i64 = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"><span class="keyword">using</span> u64 = <span class="type">unsigned</span> <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"><span class="function">mt19937_64 <span class="title">rng</span><span class="params">(std::chrono::steady_clock::now().time_since_epoch().count())</span></span>;</span><br><span class="line"><span class="keyword">constexpr</span> <span class="type">int</span> MAXN = <span class="number">1e6</span> + <span class="number">10</span>;</span><br><span class="line"><span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">rvec</span><span class="params">(MAXN)</span></span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">auto</span> &amp;v : rvec)</span><br><span class="line">        v = <span class="built_in">rng</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n, q;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; q;</span><br><span class="line">    <span class="function">vector&lt;i64&gt; <span class="title">vec</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">    <span class="function">vector&lt;u64&gt; <span class="title">pref</span><span class="params">(n + <span class="number">1</span>)</span></span>; </span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        cin &gt;&gt; vec[i], pref[i] = pref[i - <span class="number">1</span>] ^ rvec[vec[i]];</span><br><span class="line">    <span class="keyword">while</span> (q--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">int</span> l, r;</span><br><span class="line">        cin &gt;&gt; l &gt;&gt; r;</span><br><span class="line">        cout &lt;&lt; (pref[l - <span class="number">1</span>] ^ pref[r] ? <span class="string">&quot;NO&quot;</span> : <span class="string">&quot;YES&quot;</span>) &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="其他题目"><a href="#其他题目" class="headerlink" title="其他题目"></a>其他题目</h1><p>to be updated…</p>
+]]></content>
+      <tags>
+        <tag>ACM</tag>
+        <tag>算法竞赛</tag>
+        <tag>Trick</tag>
+        <tag>Xor</tag>
+        <tag>随机化</tag>
+      </tags>
+  </entry>
 </search>
