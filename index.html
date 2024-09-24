@@ -197,7 +197,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://qwedc001.github.io/2024-09-22-trick-random-xor-hashing.html">
+    <link itemprop="mainEntityOfPage" href="http://qwedc001.github.io/2024-09-22-trick-random-hashing.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -211,7 +211,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2024-09-22-trick-random-xor-hashing.html" class="post-title-link" itemprop="url">[Trick] 随机化的 Xor Hashing</a>
+            <a href="/2024-09-22-trick-random-hashing.html" class="post-title-link" itemprop="url">[Trick] 随机化的 Hashing</a>
         </h2>
 
         <div class="post-meta">
@@ -220,10 +220,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2024-09-22 21:35:00 / 修改时间：23:30:48" itemprop="dateCreated datePublished" datetime="2024-09-22T21:35:00+08:00">2024-09-22</time>
+              <time title="创建时间：2024-09-22 21:35:00" itemprop="dateCreated datePublished" datetime="2024-09-22T21:35:00+08:00">2024-09-22</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-09-24 21:43:18" itemprop="dateModified" datetime="2024-09-24T21:43:18+08:00">2024-09-24</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -240,14 +246,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.5k</span>
+              <span>3.4k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>5 分钟</span>
+              <span>6 分钟</span>
             </span>
 
         </div>
@@ -260,11 +266,13 @@
 
       
           <p>参考文献： <a target="_blank" rel="noopener" href="https://oi.wiki/misc/rand-technique/#%E9%9A%8F%E6%9C%BA%E5%8C%96%E7%94%A8%E4%BA%8E%E5%93%88%E5%B8%8C">OI-Wiki - 随机化技巧</a></p>
-<h1 id="基础思想"><a href="#基础思想" class="headerlink" title="基础思想"></a>基础思想</h1><p>异或的性质：相同数字异或为 0。</p>
+<h1 id="基础思想"><a href="#基础思想" class="headerlink" title="基础思想"></a>基础思想</h1><p>异或哈希用到了异或的性质：相同数字异或为 0。</p>
 <p>引入随机数的目的是做哈希运算的时候减小哈希碰撞，在使用 mt19937_64 的前提下，随机数强度足以避免哈希碰撞。并且，异或的上述性质可以保证当两侧的哈希相同的时候，运算结果恒定为 0。</p>
+<p>异或哈希主要在面对 set 判断等价的时候使用。</p>
+<p>还有前缀和哈希，主要是在面对 multiset（也可以说是 vector ） 判断相等的时候使用。</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2024-09-22-trick-random-xor-hashing.html#more" rel="contents">
+              <a class="btn" href="/2024-09-22-trick-random-hashing.html#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -1194,7 +1202,7 @@
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
@@ -1238,12 +1246,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">43k</span>
+    <span title="站点总字数">44k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">1:18</span>
+    <span title="站点阅读时长">1:20</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
