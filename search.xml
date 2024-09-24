@@ -455,4 +455,37 @@
         <tag>算法竞赛</tag>
       </tags>
   </entry>
+  <entry>
+    <title>这是什么？杂思！</title>
+    <url>/2024-09-24-wtf-is-this.html</url>
+    <content><![CDATA[<div class="admonition warning"><p>里面的很多内容仅为图一乐，请勿当真。</p>
+</div>
+
+<span id="more"></span>
+
+<p>什么，这不是 container，这是一个压缩 bool block。我们这个压缩 bool block 体积小方便存储，声明一个，push_back() 会变大，怎么 push 都 push 不满，用来压位，压位，压位都是很好用的，你看内存分布像满天繁星一样，放在电脑里 push_back() 变多变乱，碎片很多的。operator [] 以后，是一条变小变 safety 的 std::vector<bool>::reference，你看它怎么引用都引用不出来，不可修改随时销毁，使用 1e8 次都没问题，赛时切题带上它非常方便，用它 auto&amp;，再 range_based_for，std::allocator_traits::construct，world leg tree。什么？在哪里写？下方 Dev-C++，写五次 CE 五次，还包 WA。</p>
+<div class="admonition info"><p class="admonition-title">c++中为什么不提倡使用vector<bool>?
+</p><p>作者：Hydrogen<br>
+链接：<a href="https://www.zhihu.com/question/23367698/answer/2837413461">https://www.zhihu.com/question/23367698/answer/2837413461</a><br>
+来源：知乎<br>
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</div>
+
+<p>看到大量OIers破防，我就知道这题出对了。多组数据，如果有解，输出Νo，并输出方案数对998244853取模的结果；如果无解，输出ΥΕ5。题面禁止复制。我的std经过极限卡常，跑了1.02s，所以这题时限1024ms。计算过程会爆int，但用long long会MLE。这是一道字符串题，但字符集不只是英文字母，你需要准确用UTF-8编码读取字符。对ƶ̇这种组合字符，你需要把它当成1个字符，而不是拆成ƶ和  ̇。（请注意输出内容不是普通的英文字母。当然这句话题面里没有。）</p>
+<div class="admonition info"><p class="admonition-title">如何用“看到”“破防”“我就知道”“对了”造句?
+</p><p>作者：Grammar<br>
+链接：<a href="https://www.zhihu.com/question/667574614/answer/3632617732">https://www.zhihu.com/question/667574614/answer/3632617732</a><br>
+来源：知乎<br>
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+</div>
+
+]]></content>
+      <categories>
+        <category>算竞杂项</category>
+      </categories>
+      <tags>
+        <tag>ACM</tag>
+        <tag>算法竞赛</tag>
+      </tags>
+  </entry>
 </search>
