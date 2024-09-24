@@ -786,102 +786,6 @@ pre .javascript .function {
     border-radius: 0;
   }
 }
-.post-body .note {
-  border-radius: 3px;
-  margin-bottom: 20px;
-  padding: 1em;
-  position: relative;
-  border: 1px solid #eee;
-  border-left-width: 5px;
-}
-.post-body .note h2,
-.post-body .note h3,
-.post-body .note h4,
-.post-body .note h5,
-.post-body .note h6 {
-  margin-top: 0;
-  border-bottom: initial;
-  margin-bottom: 0;
-  padding-top: 0;
-}
-.post-body .note p:first-child,
-.post-body .note ul:first-child,
-.post-body .note ol:first-child,
-.post-body .note table:first-child,
-.post-body .note pre:first-child,
-.post-body .note blockquote:first-child,
-.post-body .note img:first-child {
-  margin-top: 0;
-}
-.post-body .note p:last-child,
-.post-body .note ul:last-child,
-.post-body .note ol:last-child,
-.post-body .note table:last-child,
-.post-body .note pre:last-child,
-.post-body .note blockquote:last-child,
-.post-body .note img:last-child {
-  margin-bottom: 0;
-}
-.post-body .note.default {
-  border-left-color: #777;
-}
-.post-body .note.default h2,
-.post-body .note.default h3,
-.post-body .note.default h4,
-.post-body .note.default h5,
-.post-body .note.default h6 {
-  color: #777;
-}
-.post-body .note.primary {
-  border-left-color: #6f42c1;
-}
-.post-body .note.primary h2,
-.post-body .note.primary h3,
-.post-body .note.primary h4,
-.post-body .note.primary h5,
-.post-body .note.primary h6 {
-  color: #6f42c1;
-}
-.post-body .note.info {
-  border-left-color: #428bca;
-}
-.post-body .note.info h2,
-.post-body .note.info h3,
-.post-body .note.info h4,
-.post-body .note.info h5,
-.post-body .note.info h6 {
-  color: #428bca;
-}
-.post-body .note.success {
-  border-left-color: #5cb85c;
-}
-.post-body .note.success h2,
-.post-body .note.success h3,
-.post-body .note.success h4,
-.post-body .note.success h5,
-.post-body .note.success h6 {
-  color: #5cb85c;
-}
-.post-body .note.warning {
-  border-left-color: #f0ad4e;
-}
-.post-body .note.warning h2,
-.post-body .note.warning h3,
-.post-body .note.warning h4,
-.post-body .note.warning h5,
-.post-body .note.warning h6 {
-  color: #f0ad4e;
-}
-.post-body .note.danger {
-  border-left-color: #d9534f;
-}
-.post-body .note.danger h2,
-.post-body .note.danger h3,
-.post-body .note.danger h4,
-.post-body .note.danger h5,
-.post-body .note.danger h6 {
-  color: #d9534f;
-}
 .pdfobject-container iframe,
 .pdfobject-container embed {
   height: 500px;
@@ -1247,7 +1151,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #1dffff;
+  background: #40d1b6;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2634,4 +2538,167 @@ mjx-container + br {
 }
 .links-of-blogroll-item {
   padding: 0;
+}
+.admonition {
+  font-size: 0.96em;
+  margin: 1.5625em 0;
+  padding: 0.6rem;
+  overflow: visible;
+  page-break-inside: avoid;
+  border-left: 0.3rem solid;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.05), 0 0 0.05rem rgba(0,0,0,0.1);
+  line-height: 1.8;
+}
+.admonition > :last-child {
+  margin-bottom: 0 !important;
+}
+.admonition-title::before {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  content: " ";
+}
+p.admonition-title {
+  position: relative;
+  margin: -0.6rem -0.6rem 0.8em -0.6rem !important;
+  padding: 0.4rem 0.6rem 0.4rem 2.5rem;
+  font-weight: 700;
+  line-height: 2;
+}
+.admonition.note,
+.admonition.question,
+.admonition.success {
+  border-color: #42b983;
+}
+.note > .admonition-title::before,
+.question > .admonition-title::before,
+.success > .admonition-title::before {
+  background-color: #42b983;
+}
+.note > .admonition-title,
+.question > .admonition-title,
+.success > .admonition-title {
+  background-color: rgba(66,185,131,0.4);
+}
+.admonition.info,
+.admonition.todo {
+  border-color: #00b8d4;
+}
+.info > .admonition-title::before,
+.todo > .admonition-title::before {
+  background-color: #00b8d4;
+}
+.info > .admonition-title,
+.todo > .admonition-title {
+  background-color: rgba(0,184,212,0.4);
+}
+.admonition.warning,
+.admonition.attention,
+.admonition.caution {
+  border-color: #ff9100;
+}
+.warning > .admonition-title::before,
+.attention > .admonition-title::before,
+.caution > .admonition-title::before {
+  background-color: #ff9100;
+}
+.warning > .admonition-title,
+.attention > .admonition-title,
+.caution > .admonition-title {
+  background-color: rgba(255,145,0,0.4);
+}
+.admonition.failure,
+.admonition.missing,
+.admonition.danger,
+.admonition.bug,
+.admonition.error {
+  border-color: #ff5252;
+}
+.failure > .admonition-title::before,
+.missing > .admonition-title::before,
+.danger > .admonition-title::before,
+.bug > .admonition-title::before,
+.error > .admonition-title::before {
+  background-color: #ff5252;
+}
+.failure > .admonition-title,
+.missing > .admonition-title,
+.danger > .admonition-title,
+.bug > .admonition-title,
+.error > .admonition-title {
+  background-color: rgba(255,82,82,0.4);
+}
+.admonition.example {
+  border-color: #903dcc;
+}
+.example > .admonition-title::before {
+  background-color: #903dcc;
+}
+.example > .admonition-title {
+  background-color: rgba(144,61,204,0.4);
+}
+.admonition.quote {
+  border-color: #aaa;
+}
+.quote > .admonition-title::before {
+  background-color: #aaa;
+}
+.quote > .admonition-title {
+  background-color: rgba(170,170,170,0.4);
+}
+.admonition.tip,
+.admonition.abstract {
+  border-color: #448aff;
+}
+.tip > .admonition-title::before,
+.abstract > .admonition-title::before {
+  background-color: #448aff;
+}
+.tip > .admonition-title,
+.abstract > .admonition-title {
+  background-color: rgba(68,138,255,0.4);
+}
+.admonition.memo,
+.admonition.sheet {
+  border-color: #c3a210;
+}
+.memo > .admonition-title::before,
+.sheet > .admonition-title::before {
+  background-color: #c3a210;
+}
+.memo > .admonition-title,
+.sheet > .admonition-title {
+  background-color: rgba(195,162,16,0.4);
+}
+@media (prefers-color-scheme: light) {
+  .admonition {
+    background-color: #eee;
+  }
+  .admonition.test {
+    border-color: #283747;
+  }
+  .test > .admonition-title::before {
+    background-color: #283747;
+  }
+  .test > .admonition-title {
+    background-color: rgba(40,55,71,0.4);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .admonition {
+    background-color: #444;
+  }
+  .admonition.test {
+    border-color: #f2f3f4;
+  }
+  .test > .admonition-title::before {
+    background-color: #f2f3f4;
+  }
+  .test > .admonition-title {
+    background-color: rgba(242,243,244,0.4);
+  }
 }
